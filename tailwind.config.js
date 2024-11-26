@@ -10,6 +10,9 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        stanford: {
+          DEFAULT: "#8b191b"
+        },
       },
     },
   },

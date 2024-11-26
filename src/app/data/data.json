@@ -1,0 +1,312 @@
+{
+  "Academic and Professional Development": [
+    {
+      "title": "Academic Coaching",
+      "description": "Help with common challenges such as note-taking and time management for all students."
+    },
+    {
+      "title": "Stanford Career Education",
+      "description": "Career planning and job search resources for all students."
+    },
+    {
+      "title": "Center for Teaching and Learning",
+      "description": "Training and resources for instructors and TAs."
+    },
+    {
+      "title": "Dissertation Bootcamp",
+      "description": "For graduate students writing their dissertation, thesis, or other projects."
+    },
+    {
+      "title": "English for Foreign Students",
+      "description": "Courses for all students for whom English is a second language."
+    },
+    {
+      "title": "Grad Studio",
+      "description": "A peer-learning program for graduate students consisting of instructional workshops followed by work sessions on topics related to graduate academics such as citation management, data presentation, and literature reviews."
+    },
+    {
+      "title": "Grad Study Halls",
+      "description": "A space for graduate students for focused work related to their research."
+    },
+    {
+      "title": "Haas Center for Public Service",
+      "description": "Connecting all students with opportunities to serve local, national, and global communities."
+    },
+    {
+      "title": "Hume Center for Writing and Speaking",
+      "description": "Resources and tutoring in oral and written communication for all students."
+    },
+    {
+      "title": "Lathrop Learning Hub",
+      "description": "Technology support and resources for all students."
+    },
+    {
+      "title": "Office of Accessible Education",
+      "description": "Academic and residential accommodations for all students with disabilities."
+    },
+    {
+      "title": "Office of Postdoctoral Affairs",
+      "description": "Support for postdocs in all aspects of their training."
+    },
+    {
+      "title": "Stanford On & Off-Campus Learning Opportunities (SOLO)",
+      "description": "A listing of experiential learning opportunities (ELOs) for undergraduates, graduates, and postdocs."
+    },
+    {
+      "title": "Student Learning Programs",
+      "description": "Tutoring, study halls, coaching and other resources for all students."
+    },
+    {
+      "title": "Vice Provost and Dean of Research",
+      "description": "Resources for managing scholarly inquiry and research for all students."
+    },
+    {
+      "title": "Vice Provost for Graduate Education",
+      "description": "Professional development, fellowships, programs, and other resources for graduate students."
+    },
+    {
+      "title": "Vice Provost for Undergraduate Education",
+      "description": "Academic advising and planning, programs, funding, and other resources for undergraduates."
+    }
+  ],
+  "Campus Communities and Community Centers": [
+    {
+      "title": "Asian American Activities Center (A3C)",
+      "description": "Resources, programming, and support for the Asian and Asian American Stanford community."
+    },
+    {
+      "title": "Bechtel International Center",
+      "description": "Resources and support for international students and scholars and their families."
+    },
+    {
+      "title": "Black Community Services Center (“The Black House”)",
+      "description": "Resources, programming, and support for the Black community at Stanford."
+    },
+    {
+      "title": "El Centro Chicano y Latino",
+      "description": "Resources, programming, and support for the Chicano and Latino community at Stanford."
+    },
+    {
+      "title": "First-Gen and/or Low Income (FLI)",
+      "description": "Support and resources for all FLI students."
+    },
+    {
+      "title": "Graduate Life Office",
+      "description": "Support and resources for graduate students."
+    },
+    {
+      "title": "Hillel@Stanford",
+      "description": "Resources, programming, and support for the Jewish community at Stanford."
+    },
+    {
+      "title": "The Markaz Resource Center",
+      "description": "Resources, programming, and support for the global Muslim community at Stanford."
+    },
+    {
+      "title": "Native American Cultural Center",
+      "description": "Resources, programming, and support for the Native American, Alaskan Native, Native Hawai’ian community at Stanford."
+    },
+    {
+      "title": "Office for Inclusion, Belonging and Intergroup Communication (IBIC)",
+      "description": "Resources and programming for all students to build communication and understanding across differences."
+    },
+    {
+      "title": "Office for Military-Affiliated Communities",
+      "description": "Resources, programming, and support for the military-affiliated and veteran communities at Stanford."
+    },
+    {
+      "title": "Queer Student Resources",
+      "description": "Resources, programming, and support for all students of all gender identities and sexual orientations."
+    },
+    {
+      "title": "Office for Religious and Spiritual Life",
+      "description": "Guidance and support of spiritual and religious life in the Stanford community."
+    },
+    {
+      "title": "Undocumented at Stanford",
+      "description": "Resources for undocumented students."
+    },
+    {
+      "title": "Women’s Community Center",
+      "description": "Resources, programming, and support for all students around issues of gender, equity, identity, and justice."
+    }
+  ],
+  "Concerns and Grievances": [
+    {
+      "title": "Protected Identity Harm Reporting",
+      "description": "For reporting and addressing an act of harm to an individual or community based on their identity."
+    },
+    {
+      "title": "ADA (Americans with Disabilities Act)/Section 504 Grievance Procedure",
+      "description": "For grievances alleging discrimination on the basis of disability or denial of accommodations and services."
+    },
+    {
+      "title": "Age Discrimination Act of 1975",
+      "description": "For grievances alleging discrimination on the basis of age."
+    },
+    {
+      "title": "Grievance Resolution Procedure for Postdoctoral Scholars",
+      "description": "For postdoc academic and non-academic grievances."
+    },
+    {
+      "title": "SHARE/Title IX Office",
+      "description": "For reporting alleged incidents of interpersonal violence, harassment, and/or gender-based discrimination."
+    },
+    {
+      "title": "Student Academic Grievance Procedure",
+      "description": "For student grievances alleging improper academic decision."
+    },
+    {
+      "title": "Student Grievances",
+      "description": "Stanford Bulletin student grievances summary page."
+    },
+    {
+      "title": "Student Non-Academic Grievance Procedure",
+      "description": "For student grievances that do not fall within other processes, including potential discrimination and harassment."
+    }
+  ],
+  "Health and Wellness": [
+    {
+      "title": "The Bridge Peer Counseling Center",
+      "description": "Student-run peer counseling for all students."
+    },
+    {
+      "title": "CAPS - Counseling and Psychological Services",
+      "description": "Counseling and mental health services for all students."
+    },
+    {
+      "title": "Confidential Support Team (CST)",
+      "description": "Counseling and consultation for those impacted by sexual, relationship, and gender-based violence."
+    },
+    {
+      "title": "Environmental Health and Safety",
+      "description": "Health and safety information for all community members."
+    },
+    {
+      "title": "Grieving at Stanford",
+      "description": "Help and resources when experiencing grief and loss."
+    },
+    {
+      "title": "Lactation Resources",
+      "description": "Helpful resources about breastfeeding, including campus locations."
+    },
+    {
+      "title": "Mental Health Resources at Stanford",
+      "description": "An overview of Stanford’s mental health and wellness resources for students."
+    },
+    {
+      "title": "Muslim Mental Health Initiative (MMHI) Care Program",
+      "description": "Connects students to local Muslim-identifying therapists."
+    },
+    {
+      "title": "Office of Religious and Spiritual Life",
+      "description": "Resource for all community members regardless of personal beliefs."
+    },
+    {
+      "title": "Recreation and Wellness",
+      "description": "Recreation, fitness, and wellness information for the Stanford community."
+    },
+    {
+      "title": "SHARE/Title IX Office",
+      "description": "Resources for community impacted by interpersonal violence, harassment, and gender-based discrimination."
+    },
+    {
+      "title": "Vaden Student Health Center",
+      "description": "Student medical health services and preventative counseling."
+    },
+    {
+      "title": "Well-Being at Stanford",
+      "description": "Resources and programs to promote student wellbeing and flourishing."
+    },
+    {
+      "title": "Weiland Health Initiative",
+      "description": "Health and wellness resources for students across all gender identities and sexual orientations."
+    }
+  ],
+  "Diversity, Equity, and Inclusion": [
+    {
+      "title": "Diversity and Access Office",
+      "description": "University-wide compliance with federal, state, and local regulations about non-discrimination and disability access."
+    },
+    {
+      "title": "Diversity Works",
+      "description": "Stanford news, resources, and events related to diversity, equity, and inclusion."
+    },
+    {
+      "title": "H&S Diversity Programs",
+      "description": "Resources for H&S faculty, graduate students, and prospective graduate students."
+    },
+    {
+      "title": "IDEAL (Inclusion, Diversity, Equity & Access in a Learning Environment)",
+      "description": "President’s initiative on inclusion, diversity, equity, and access in research, recruitment, education, and engagement."
+    },
+    {
+      "title": "Office of Accessible Education",
+      "description": "Support and resources for all students with disabilities."
+    },
+    {
+      "title": "Office for Inclusion, Belonging and Intergroup Communication (IBIC)",
+      "description": "Resources and programming to build communication and understanding across differences at Stanford."
+    },
+    {
+      "title": "VPGE Diversity Initiatives",
+      "description": "VPGE resources to support diversity, equity, and inclusion in graduate education."
+    }
+  ],
+  "Financial Resources": [
+    {
+      "title": "Financial Aid Graduate Basics",
+      "description": "Information for graduate students about funding and financial aid."
+    },
+    {
+      "title": "Financial Aid Undergraduate Basics",
+      "description": "Information for undergraduate students about financial aid."
+    },
+    {
+      "title": "Financial Aid Office",
+      "description": "Helpful information for all students, including estimated cost of attendance."
+    },
+    {
+      "title": "Financial Assistance Programs for Postdoctoral Scholars",
+      "description": "Funding for postdocs facing financially challenging situations."
+    },
+    {
+      "title": "Graduate Student Support Funding",
+      "description": "Funding for graduate students facing financially challenging situations."
+    },
+    {
+      "title": "Mind Over Money",
+      "description": "Resources to equip all students to make informed financial decisions."
+    },
+    {
+      "title": "My Finances",
+      "description": "Information for all students about their student accounts, payroll deduction, and other financial topics."
+    },
+    {
+      "title": "Opportunity Fund",
+      "description": "Financial assistance for FLI undergraduates with unexpected financial challenges and opportunities related to their academic or professional development."
+    }
+  ],
+  "University Policies": [
+    {
+      "title": "Administrative Guide",
+      "description": "Policies and guidelines for non-research university activities, including undergraduate and graduate student employment."
+    },
+    {
+      "title": "Graduate Academic Policies and Procedures",
+      "description": "University policies and information related to graduate student academic progress."
+    },
+    {
+      "title": "Research Policy Handbook",
+      "description": "University policies and guidelines related to research."
+    },
+    {
+      "title": "Stanford Bulletin",
+      "description": "Official catalog of courses, degrees, policies, and degree requirements."
+    },
+    {
+      "title": "University-wide policy documents",
+      "description": "Helpful list of university-wide policies and guidelines."
+    }
+  ]
+}
