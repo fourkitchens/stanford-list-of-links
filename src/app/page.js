@@ -57,7 +57,7 @@ export default function Home() {
             <div key={key} className='border border-solid border-[#E9E6DF] hover:shadow-lg' >
               {showImage && 
               <div className='aspect-video'>
-                <Image src={[image1, image2, image3, image4][index % 4]} alt={key} objectFit='cover' className='w-full h-full object-cover' />
+                <Image src={[image1, image2, image3, image4][index % 4]} alt={key} objectFit='cover' className='w-full h-full object-cover' unoptimized />
               </div>}
 
               <div className='flex flex-row gap-4 items-center border-b border-[#E9E6DF] border-solid p-4'>
@@ -85,7 +85,7 @@ export default function Home() {
             <div key={key} className='mt-16 -ml-4'>
               {(showImage && gridCols > 1 ) &&
               <div className='aspect-video mb-4'>
-                <Image src={[image1, image2, image3, image4][index % 4]} alt={key} objectFit='cover' className='w-full h-full object-cover' />
+                <Image src={[image1, image2, image3, image4][index % 4]} alt={key} objectFit='cover' className='w-full h-full object-cover' unoptimized />
               </div>}
               
               <div className='flex flex-row gap-4 items-center border-b border-[#E9E6DF] border-solid pb-4 pr-0 pl-4'>
