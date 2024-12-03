@@ -15,12 +15,12 @@ return (
         Skip to main content
       </a>
       
-      <div id="brandbar">
+      <div id="brandbar" className="bg-stanford py-2">
         <div className="container">
           <a href="http://www.stanford.edu">
             <img src="https://www.stanford.edu/su-identity/images/brandbar-stanford-logo@2x.png" alt="Stanford University" width="152" height="23"/>
           </a>
-        </div> 
+        </div>
       </div> 
       
       

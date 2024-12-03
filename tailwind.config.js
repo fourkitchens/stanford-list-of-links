@@ -14,6 +14,9 @@ module.exports = {
           DEFAULT: "#8b191b"
         },
       },
+      fontFamily: {
+        sans: ["Source Sans Pro", "sans-serif"],
+      }
     },
   },
   plugins: [],

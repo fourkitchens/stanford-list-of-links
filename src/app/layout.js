@@ -1,16 +1,12 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import HelpfulStanfordResources from "./components/HelpfulStanfordResources";
+import { Source_Sans_3 } from "next/font/google";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const sourceSansPro = Source_Sans_3({
+  weight: ["300", "400", "500", "600", "700", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
 });
 
 export const metadata = {
@@ -28,7 +24,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" media="all" href="https://humsci.stanford.edu/sites/default/files/css/css_cXcwUSDS2QzSupf2s2auuugrrMVNZ8w8o8IDwQr3Ki8.css?delta=3&amp;language=en&amp;theme=stanford_hs&amp;include=eJxVyksKgDAMBcALFT2SvNpoC-mHvHTh7XUj4nYYXnSpawQl0NGObmnLXE_tEfojVphXaZN_7nuBMsMkDBhOw3g42RzQ5ZNltjGjFmZJgcVlg4r5Gz-5AdIfOj0"/>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${sourceSansPro.variable} font-sans antialiased`}
       >
         <HelpfulStanfordResources>
           {children}
