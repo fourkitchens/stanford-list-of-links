@@ -61,7 +61,11 @@ export default function Home() {
               </div>}
 
               <div className='flex flex-row gap-4 items-center border-b border-[#E9E6DF] border-solid p-4'>
-                <h2 className='!font-bold text-stanford text-3xl normal-case !my-0 text-balance'>{key}</h2>
+                <h2 className={clsx(
+                  '!font-bold text-stanford normal-case !my-0 text-balance',
+                  {'text-3xl':gridCols < 3},
+                  {'text-2xl':gridCols === 3}
+                )}>{key}</h2>
               </div>
               
               {data[key].map((item, index) => (
@@ -71,7 +75,12 @@ export default function Home() {
           ))}
         </div>)
 
-        : (<div className={`grid grid-cols-${gridCols} gap-12`}>
+        : (<div className={clsx(
+            'grid gap-12', 
+            {'grid-cols-1':gridCols === 1},
+            {'grid-cols-2':gridCols === 2},
+            {'grid-cols-3':gridCols === 3}
+          )}>
           {Object.keys(data).map((key, index) => (
             <div key={key} className='mt-16 -ml-4'>
               {(showImage && gridCols > 1 ) &&
@@ -87,7 +96,7 @@ export default function Home() {
                 }
                 
                 <h2 className={clsx(
-                  '!font-bold text-stanford text-3xl normal-case !my-0 text-balance',
+                  '!font-bold text-stanford normal-case !my-0 text-balance',
                   {'text-3xl':gridCols < 3},
                   {'text-2xl':gridCols === 3}
                 )}>{key}</h2>
