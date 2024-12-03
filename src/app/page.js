@@ -51,7 +51,7 @@ const LinkList = ({title, description, url = "#", spacing, linkColor, last, show
           {'font-normal':!showDescription},
           {'text-stanford':linkColor})
         }>
-          {showIcons && icon && <FontAwesomeIcon
+          {icon && <FontAwesomeIcon
             icon={icon}
             className="opacity-50"
           />} {title}
@@ -70,7 +70,7 @@ export default function Home() {
   const [showAsCard, setShowAsCard] = useState(false);
   const [showDescription, setShowDescription] = useState(true);
   const [gridCols, setGridCols] = useState(1);
-  const [showIcons, setShowIcons] = useState(false);
+  const [showIcons, setShowIcons] = useState(true);
 
   return (
     <div>
