@@ -8,6 +8,15 @@ import image3 from './images/2.webp';
 import image2 from './images/3.webp';
 import image1 from './images/4.webp';
 import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faSchool,
+  faBuildingColumns,
+  faAtomSimple,
+  faGlobeStand,
+  faBooks,
+  faUserGraduate
+} from '@fortawesome/pro-solid-svg-icons'
 
 const Arrow = ({classes}) => (
   <svg className={classes} width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +24,17 @@ const Arrow = ({classes}) => (
   </svg>
 );
 
-const LinkList = ({title, description, url = "#", spacing, linkColor, last, showDescription}) => {
+// First, create an array of icons to cycle through
+const icons = [
+  faSchool,
+  faBuildingColumns,
+  faAtomSimple,
+  faGlobeStand,
+  faBooks,
+  faUserGraduate
+];
+
+const LinkList = ({title, description, url = "#", spacing, linkColor, last, showDescription, icon, showIcons}) => {
   return (
     <article className={clsx(
         'group text-long flex flex-row gap-4 items-center w-full space-y-0 border-[#E9E6DF] border-solid transition-all hover:cursor-pointer hover:bg-[#f8f4ea]',
@@ -32,7 +51,10 @@ const LinkList = ({title, description, url = "#", spacing, linkColor, last, show
           {'font-normal':!showDescription},
           {'text-stanford':linkColor})
         }>
-          {title}
+          {showIcons && icon && <FontAwesomeIcon
+            icon={icon}
+            className="opacity-50"
+          />} {title}
         </p>
         {showDescription && <p className='text-lg m-0'>{description}</p>}
       </div>
@@ -48,6 +70,7 @@ export default function Home() {
   const [showAsCard, setShowAsCard] = useState(false);
   const [showDescription, setShowDescription] = useState(true);
   const [gridCols, setGridCols] = useState(1);
+  const [showIcons, setShowIcons] = useState(false);
 
   return (
     <div>
@@ -68,8 +91,20 @@ export default function Home() {
                 )}>{key}</h2>
               </div>
               
-              {data[key].map((item, index) => (
-                <LinkList key={index} title={item.title} description={item.description} spacing={spacing} url={item.url} linkColor={linkColor} last={index === data[key].length - 1} showDescription={showDescription} card={true} />
+              {data[key].map((item, itemIndex) => (
+                <LinkList 
+                  key={itemIndex} 
+                  title={item.title} 
+                  description={item.description} 
+                  spacing={spacing} 
+                  url={item.url} 
+                  linkColor={linkColor} 
+                  last={itemIndex === data[key].length - 1} 
+                  showDescription={showDescription}
+                  card={true}
+                  showIcon={showIcons}
+                  icon={showIcons ? icons[itemIndex % icons.length] : null}
+                />
               ))}
             </div>
           ))}
@@ -102,8 +137,19 @@ export default function Home() {
                 )}>{key}</h2>
               </div>
               
-              {data[key].map((item, index) => (
-                <LinkList key={index} title={item.title} description={item.description} spacing={spacing} url={item.url} linkColor={linkColor} last={index === data[key].length - 1} showDescription={showDescription} />
+              {data[key].map((item, itemIndex) => (
+                <LinkList 
+                  key={itemIndex} 
+                  title={item.title} 
+                  description={item.description} 
+                  spacing={spacing} 
+                  url={item.url} 
+                  linkColor={linkColor} 
+                  last={itemIndex === data[key].length - 1} 
+                  showDescription={showDescription}
+                  showIcon={showIcons}
+                  icon={showIcons ? icons[itemIndex % icons.length] : null}
+                />
               ))}
             </div>
           ))}
@@ -159,6 +205,16 @@ export default function Home() {
               checked={showDescription} 
               className='bg-slate-800 text-white rounded-lg p-2'
               onChange={(e) => setShowDescription(e.target.checked)}
+            />
+          </div>
+          <div>
+            <label htmlFor='showIcons' className='font-bold mr-2'>Icons</label>
+            <input 
+              type='checkbox' 
+              id='showIcons'
+              checked={showIcons} 
+              className='bg-slate-800 text-white rounded-lg p-2'
+              onChange={(e) => setShowIcons(e.target.checked)}
             />
           </div>
           <div>
