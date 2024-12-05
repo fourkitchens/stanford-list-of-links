@@ -43,9 +43,9 @@ const LinkList = ({title, description, url = "#", spacing, linkColor, last, show
         {'p-4':spacing === "medium"}, 
         {'px-4 py-2':spacing === "small"}
       )}>
-      <div className='flex-grow'>
+      <a href="#" className='flex-grow font-normal' aria-label={title}>
         <p className={
-          clsx('text-xl m-0 group-hover:text-stanford text-balance', 
+          clsx('text-xl m-0 text-[#4d4f53] group-hover:text-stanford text-balance', 
           {'text-2xl':spacing === "large"},
           {'font-bold':showDescription},
           {'font-normal':!showDescription},
@@ -56,8 +56,8 @@ const LinkList = ({title, description, url = "#", spacing, linkColor, last, show
             className="opacity-50"
           />} {title}
         </p>
-        {showDescription && <p className='text-lg m-0'>{description}</p>}
-      </div>
+        {showDescription && <p className='text-lg m-0 text-[#4d4f53]'>{description}</p>}
+      </a>
       <Arrow classes="ml-auto transition-all w-[22px] flex-shrink-0 opacity-0 -translate-x-8 group-hover:opacity-100 group-hover:translate-x-0"/>
     </article> 
   )
