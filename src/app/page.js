@@ -37,7 +37,7 @@ const icons = [
 const LinkList = ({title, description, url = "#", spacing, linkColor, last, showDescription, icon, showIcons}) => {
   return (
     <article className={clsx(
-        'group text-long flex flex-row gap-4 items-center w-full space-y-0 border-[#E9E6DF] border-solid transition-all hover:cursor-pointer hover:bg-[#f8f4ea]',
+        'group text-long flex flex-row gap-4 items-center w-full space-y-0 border-[#cabb91] border-solid transition-all hover:cursor-pointer hover:bg-[#f8f4ea]',
         {'border-b': !last}, 
         {'px-4 py-6':spacing === "large"}, 
         {'p-4':spacing === "medium"}, 
@@ -77,13 +77,13 @@ export default function Home() {
       {showAsCard ? 
         (<div className={`grid grid-cols-${gridCols} gap-4`}>
           {Object.keys(data).map((key, index) => (
-            <div key={key} className='border border-solid border-[#E9E6DF] hover:shadow-lg' >
+            <div key={key} className='border border-solid border-[#cabb91] hover:shadow-lg' >
               {showImage && 
               <div className='aspect-video'>
                 <Image src={[image1, image2, image3, image4][index % 4]} alt={key} objectFit='cover' className='w-full h-full object-cover' unoptimized />
               </div>}
 
-              <div className='flex flex-row gap-4 items-center border-b border-[#E9E6DF] border-solid p-4'>
+              <div className='flex flex-row gap-4 items-center border-b border-[#cabb91] border-solid p-4'>
                 <h2 className={clsx(
                   '!font-bold text-stanford normal-case !my-0 text-balance',
                   {'text-3xl':gridCols < 3},
@@ -123,7 +123,7 @@ export default function Home() {
                 <Image src={[image1, image2, image3, image4][index % 4]} alt={key} objectFit='cover' className='w-full h-full object-cover' unoptimized />
               </div>}
               
-              <div className='flex flex-row gap-4 items-center border-b border-[#E9E6DF] border-solid pb-4 pr-0 pl-4'>
+              <div className='flex flex-row gap-4 items-center border-b border-[#cabb91] border-solid pb-4 pr-0 pl-4'>
                 {(showImage && gridCols === 1 ) && 
                   <div className='aspect-video bg-slate-500 min-w-[100px]'>
                     <Image src={[image1, image2, image3, image4][index % 4]} alt={key} objectFit='cover' className='w-full h-full object-cover max-w-[200px]' unoptimized />
