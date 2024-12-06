@@ -34,16 +34,16 @@ const icons = [
   faUserGraduate
 ];
 
-const LinkList = ({title, description, url = "#", spacing, linkColor, last, showDescription, icon, showIcons}) => {
+const LinkList = ({title, description, url = "#", spacing, linkColor, last, showDescription, icon, showIcons, showUnderline}) => {
   return (
-    <article className={clsx(
+    <li className={clsx(
         'group text-long flex flex-row gap-4 items-center w-full space-y-0 border-[#cabb91] border-solid transition-all hover:cursor-pointer hover:bg-[#f8f4ea]',
         {'border-b': !last}, 
         {'px-4 py-6':spacing === "large"}, 
         {'p-4':spacing === "medium"}, 
         {'px-4 py-2':spacing === "small"}
       )}>
-      <a href="#" className='flex-grow font-normal' aria-label={title}>
+      <div className='flex-grow font-normal'>
         <p className={
           clsx('text-xl m-0 text-[#4d4f53] group-hover:text-stanford text-balance', 
           {'text-2xl':spacing === "large"},
@@ -54,12 +54,18 @@ const LinkList = ({title, description, url = "#", spacing, linkColor, last, show
           {icon && <FontAwesomeIcon
             icon={icon}
             className="opacity-50"
-          />} {title}
+          />} <a href="#" className={clsx(
+            "text-[#4d4f53]",
+            "group-hover:text-stanford group-hover:decoration-stanford",
+            {'underline decoration-1 underline-offset-4':showUnderline},
+            {'text-stanford decoration-stanford':linkColor},
+            {'decoration-[#cabb91]':!linkColor}
+            )}>{title}</a>
         </p>
         {showDescription && <p className='text-lg m-0 text-[#4d4f53]'>{description}</p>}
-      </a>
+      </div>
       <Arrow classes="ml-auto transition-all w-[22px] flex-shrink-0 opacity-0 -translate-x-8 group-hover:opacity-100 group-hover:translate-x-0"/>
-    </article> 
+    </li> 
   )
 }
 
@@ -71,6 +77,7 @@ export default function Home() {
   const [showDescription, setShowDescription] = useState(true);
   const [gridCols, setGridCols] = useState(1);
   const [showIcons, setShowIcons] = useState(false);
+  const [showUnderline, setShowUnderline] = useState(false);
 
   return (
     <div>
@@ -91,21 +98,24 @@ export default function Home() {
                 )}>{key}</h2>
               </div>
               
-              {data[key].map((item, itemIndex) => (
-                <LinkList 
-                  key={itemIndex} 
-                  title={item.title} 
-                  description={item.description} 
-                  spacing={spacing} 
-                  url={item.url} 
-                  linkColor={linkColor} 
-                  last={itemIndex === data[key].length - 1} 
-                  showDescription={showDescription}
-                  card={true}
-                  showIcon={showIcons}
-                  icon={showIcons ? icons[itemIndex % icons.length] : null}
-                />
-              ))}
+              <ul className="mt-0">
+                {data[key].map((item, itemIndex) => (
+                  <LinkList 
+                    key={itemIndex} 
+                    title={item.title} 
+                    description={item.description} 
+                    spacing={spacing} 
+                    url={item.url} 
+                    linkColor={linkColor} 
+                    last={itemIndex === data[key].length - 1} 
+                    showDescription={showDescription}
+                    card={true}
+                    showIcon={showIcons}
+                    showUnderline={showUnderline}
+                    icon={showIcons ? icons[itemIndex % icons.length] : null}
+                  />
+                ))}
+              </ul>
             </div>
           ))}
         </div>)
@@ -137,20 +147,23 @@ export default function Home() {
                 )}>{key}</h2>
               </div>
               
-              {data[key].map((item, itemIndex) => (
-                <LinkList 
-                  key={itemIndex} 
-                  title={item.title} 
-                  description={item.description} 
-                  spacing={spacing} 
-                  url={item.url} 
-                  linkColor={linkColor} 
-                  last={itemIndex === data[key].length - 1} 
-                  showDescription={showDescription}
-                  showIcon={showIcons}
-                  icon={showIcons ? icons[itemIndex % icons.length] : null}
-                />
-              ))}
+              <ul className="mt-0">
+                {data[key].map((item, itemIndex) => (
+                  <LinkList 
+                    key={itemIndex} 
+                    title={item.title} 
+                    description={item.description} 
+                    spacing={spacing} 
+                    url={item.url} 
+                    linkColor={linkColor} 
+                    last={itemIndex === data[key].length - 1} 
+                    showDescription={showDescription}
+                    showIcon={showIcons}
+                    showUnderline={showUnderline}
+                    icon={showIcons ? icons[itemIndex % icons.length] : null}
+                  />
+                ))}
+              </ul>
             </div>
           ))}
         </div>)}
@@ -215,6 +228,16 @@ export default function Home() {
               checked={showIcons} 
               className='bg-slate-800 text-white rounded-lg p-2'
               onChange={(e) => setShowIcons(e.target.checked)}
+            />
+          </div>
+          <div>
+            <label htmlFor='showUnderline' className='font-bold mr-2'>Underline links</label>
+            <input 
+              type='checkbox' 
+              id='showUnderline'
+              checked={showUnderline} 
+              className='bg-slate-800 text-white rounded-lg p-2'
+              onChange={(e) => setShowUnderline(e.target.checked)}
             />
           </div>
           <div>
