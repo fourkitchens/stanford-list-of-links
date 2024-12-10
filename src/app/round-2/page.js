@@ -1,12 +1,12 @@
 "use client"
 
-import data from './data/data.json';
+import data from '../data/data.json';
 import clsx from 'clsx';
 import { useState } from 'react';
-import image4 from './images/1.webp';
-import image3 from './images/2.webp';
-import image2 from './images/3.webp';
-import image1 from './images/4.webp';
+import image4 from '../images/1.webp';
+import image3 from '../images/2.webp';
+import image2 from '../images/3.webp';
+import image1 from '../images/4.webp';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -17,7 +17,7 @@ const Arrow = ({classes}) => (
   </svg>
 );
 
-const LinkItem = ({title, description, url = "#", last, showDescription, gridCols}) => {
+const LinkItem = ({title, description, url = "#", last, showDescription, showUnderline, gridCols}) => {
   return (
     <li className={clsx(
         'group text-long flex flex-row gap-4 items-center w-full space-y-0 border-[#cabb91] border-solid transition-all hover:cursor-pointer hover:bg-[#f8f4ea]',
@@ -40,6 +40,7 @@ const LinkItem = ({title, description, url = "#", last, showDescription, gridCol
             // NOTE: logic for font weight.
             {'font-bold':showDescription},
             {'!font-normal':!showDescription},
+            {'underline decoration-1 underline-offset-4':showUnderline},
             )}>{title}</a>
         </p>
         {showDescription && <p className='text-lg m-0 text-[#4d4f53]'>{description}</p>}
@@ -53,6 +54,7 @@ export default function Home() {
   const [showImage, setShowImage] = useState(false);
   const [showDescription, setShowDescription] = useState(true);
   const [gridCols, setGridCols] = useState(1);
+  const [showUnderline, setShowUnderline] = useState(false);
 
   return (
     <div>
@@ -97,6 +99,7 @@ export default function Home() {
                     url={item.url} 
                     last={itemIndex === data[key].length - 1} 
                     showDescription={showDescription}
+                    showUnderline={showUnderline}
                     gridCols={gridCols}
                   />
                 ))}
@@ -108,7 +111,7 @@ export default function Home() {
 
       {/* Controls */}
       <section className='fixed bottom-8 left-8 right-8 bg-slate-600 text-white px-8 py-4 rounded-lg flex flex-row gap-8 items-center'>
-        <div className='font-bold uppercase'>Settings</div>
+        <div className='font-bold uppercase'>ROUND 2</div>
           <div>
             <label htmlFor='showImage' className='font-bold mr-2'>Image</label>
             <input 
@@ -130,6 +133,16 @@ export default function Home() {
           </div>
 
           <div>
+            <label htmlFor='showUnderline' className='font-bold mr-2'>Underline links</label>
+            <input 
+              type='checkbox' 
+              id='showUnderline'
+              checked={showUnderline} 
+              className='bg-slate-800 text-white rounded-lg p-2'
+              onChange={(e) => setShowUnderline(e.target.checked)}
+            />
+          </div>
+          <div>
             <label htmlFor='gridCols' className='font-bold mr-2'>Grid Columns</label>
             <input 
               type='number' 
@@ -141,8 +154,7 @@ export default function Home() {
               onChange={(e) => setGridCols(Number(e.target.value))}
             />
           </div>
-          <Link href="/round-1" className="bg-slate-400 inline-block rounded px-4 py-2 text-slate-900 hover:text-slate-900 ml-auto">Visit Round 1</Link>
-          <Link href="/round-2" className="bg-slate-400 inline-block rounded px-4 py-2 text-slate-900 hover:text-slate-900 ">Visit Round 2</Link>
+          <Link href="/" className="bg-slate-400 inline-block rounded px-4 py-2 text-slate-900 hover:text-slate-900 ml-auto">Back to current design</Link>
       </section>
     </div>
   );

@@ -170,7 +170,7 @@ export default function Home() {
         </div>)}
 
       <section className='fixed bottom-8 left-8 right-8 bg-slate-600 text-white px-8 py-4 rounded-lg flex flex-row gap-8 items-center'>
-        <div className='font-bold uppercase'>Settings</div>
+        <div className='font-bold uppercase'>ROUND 1</div>
         <div>
           <label htmlFor='spacing' className='font-bold mr-2'>Spacing</label>
             <select 
